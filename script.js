@@ -6,14 +6,8 @@ function openMpesa(){
 
     if(isAndroid){
 
-        window.location.href = "mpesa://";
-
-        setTimeout(() => {
-
-            window.location.href =
-            "https://play.google.com/store/apps/details?id=com.android.stk";
-
-        },2000);
+        window.location.href =
+        "https://play.google.com/store/apps/details?id=com.android.stk";
 
     }
 
@@ -26,7 +20,7 @@ function openMpesa(){
 
     else{
 
-        alert("Open on a mobile device to launch M-Pesa.");
+        alert("Open this page on a mobile device.");
 
     }
 
