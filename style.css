@@ -1,0 +1,400 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+    font-family:'Poppins', sans-serif;
+    position:relative;
+}
+
+
+
+/* BACKGROUND */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at top, rgba(255,191,0,0.15), transparent 35%),
+    radial-gradient(circle at bottom, rgba(255,191,0,0.08), transparent 35%);
+    z-index:-3;
+}
+
+
+
+/* PARTICLES */
+
+.particles::before,
+.particles::after{
+    content:'';
+    position:fixed;
+    width:200%;
+    height:200%;
+    background-image:
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size:70px 70px;
+    animation:moveParticles 30s linear infinite;
+    z-index:-2;
+}
+
+.particles::after{
+    animation-duration:50s;
+    opacity:0.4;
+}
+
+@keyframes moveParticles{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-300px);
+    }
+
+}
+
+
+
+
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    position:relative;
+}
+
+.hero-content{
+    text-align:center;
+    animation:fadeIn 2s ease;
+}
+
+.logo{
+    width:210px;
+    filter:drop-shadow(0 0 30px rgba(255,191,0,0.35));
+    animation:float 5s ease-in-out infinite;
+}
+
+.mini-title{
+    margin-top:35px;
+    letter-spacing:5px;
+    color:#c9c9c9;
+    font-size:0.8rem;
+}
+
+.hero h1{
+    margin-top:15px;
+    font-size:5rem;
+    line-height:1.05;
+    color:#ffcc00;
+    font-family:'Cinzel', serif;
+    text-shadow:0 0 35px rgba(255,204,0,0.35);
+}
+
+.hero-text{
+    margin-top:25px;
+    color:#d2d2d2;
+    font-size:1.1rem;
+}
+
+.paybill-panel{
+    margin-top:50px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    padding:35px 55px;
+    border-radius:35px;
+    display:inline-block;
+    box-shadow:
+    0 0 40px rgba(255,191,0,0.12),
+    inset 0 0 20px rgba(255,255,255,0.03);
+}
+
+.paybill-panel span{
+    color:#b8b8b8;
+    letter-spacing:2px;
+    font-size:0.8rem;
+}
+
+.paybill-panel h2{
+    margin-top:12px;
+    font-size:4rem;
+    color:#ffcc00;
+}
+
+
+
+
+
+/* GIVING */
+
+.giving-section{
+    padding:120px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title p{
+    color:#bcbcbc;
+    letter-spacing:4px;
+    margin-bottom:10px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    color:#ffcc00;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    transition:0.5s;
+}
+
+.card-glow{
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:radial-gradient(circle, rgba(255,191,0,0.2), transparent 70%);
+    top:-100px;
+    right:-100px;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.02);
+    border-color:#ffcc00;
+    box-shadow:0 0 40px rgba(255,191,0,0.18);
+}
+
+.card h3{
+    color:#ffcc00;
+    font-size:1.7rem;
+    margin-bottom:18px;
+}
+
+.card p{
+    color:#d5d5d5;
+    margin-bottom:12px;
+}
+
+.card span{
+    font-weight:600;
+}
+
+
+
+
+
+/* MPESA */
+
+.mpesa-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.mpesa-box{
+    position:relative;
+    text-align:center;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(14px);
+    border-radius:40px;
+    padding:80px 40px;
+    overflow:hidden;
+    width:100%;
+    max-width:650px;
+}
+
+.mpesa-box img{
+    width:110px;
+    position:relative;
+    z-index:2;
+}
+
+.mpesa-box h2{
+    margin-top:25px;
+    font-size:3rem;
+    color:#ffcc00;
+    position:relative;
+    z-index:2;
+}
+
+.mpesa-box p{
+    margin-top:18px;
+    color:#d5d5d5;
+    position:relative;
+    z-index:2;
+}
+
+.mpesa-box button{
+    margin-top:40px;
+    border:none;
+    background:#10b981;
+    color:white;
+    padding:20px 45px;
+    border-radius:60px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+    position:relative;
+    z-index:2;
+    box-shadow:0 0 35px rgba(16,185,129,0.35);
+}
+
+.mpesa-box button:hover{
+    transform:scale(1.08);
+}
+
+.ring{
+    position:absolute;
+    width:300px;
+    height:300px;
+    border:1px solid rgba(16,185,129,0.2);
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:pulse 5s linear infinite;
+}
+
+.ring2{
+    width:450px;
+    height:450px;
+    animation-delay:1s;
+}
+
+.ring3{
+    width:600px;
+    height:600px;
+    animation-delay:2s;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    padding:35px;
+    text-align:center;
+    color:#8a8a8a;
+}
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        opacity:0.2;
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    50%{
+        opacity:0.5;
+    }
+
+    100%{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(1.3);
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .paybill-panel{
+        width:100%;
+        padding:30px 20px;
+    }
+
+    .paybill-panel h2{
+        font-size:2.5rem;
+    }
+
+    .section-title h2{
+        font-size:2.2rem;
+    }
+
+    .mpesa-box h2{
+        font-size:2.2rem;
+    }
+
+}
