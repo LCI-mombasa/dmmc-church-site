@@ -7,20 +7,20 @@ function openMpesa(){
     if(isAndroid){
 
         window.location.href =
-        "https://play.google.com/store/apps/details?id=com.android.stk";
+        "https://play.google.com/store/apps/details?id=com.safaricom.mpesa"
 
     }
 
     else if(isiPhone){
 
         window.location.href =
-        "https://apps.apple.com/ke/app/m-pesa/id1496788866";
+        "https://apps.apple.com/ke/app/m-pesa/id1496788866"
 
     }
 
     else{
 
-        alert("Open this page on a mobile device.");
+        alert("Please open this page on a mobile device.")
 
     }
 
